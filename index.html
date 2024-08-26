@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLACA</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <div class="header-title">
+            <h1>TechMap</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">PC</a></li>
+                <li><a href="#">GPU</a></li>
+                <li><a href="#">CPU</a></li>
+                <li><a href="#">Fuentes de poder</a></li>
+                <li><a href="#">Placa madre</a></li>
+                <li><button class="github-button">GitHub</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <label><input type="checkbox" id="filter-slots" value="slots"> Ranuras</label>
+            <label><input type="checkbox" id="filter-ports" value="ports"> Puertos</label>
+            <label><input type="checkbox" id="filter-power" value="power"> Alimentación</label>
+            <label><input type="checkbox" id="filter-cooling" value="cooling"> Disipadores</label>
+            <label><input type="checkbox" id="filter-chips" value="chips"> Chips</label>        
+            
+                <!-- Agrega este contenedor -->
+                <div id="definition-container" class="definition-container">
+                    <h3 id="definition-title"></h3>
+                    <p id="definition-text"></p>
+                    <img id="definition-image" src="" alt="" style="display: none; max-width: 100%; margin-top: 10px;">
+                </div>
+            </aside>
+            
+        <main class="image-container">
+            <img src="https://cdn.pixabay.com/photo/2015/03/21/06/28/motherboard-683247_1280.png" alt="Imagen descriptiva">
+            <div class="buttons-container">
+                <button class="btn cpu chips slots" data-title="Socket del CPU" data-description="El socket del CPU es..." data-image="cpu-image-url"> PCIe</button>
+                <button class="btn pci slots" data-title="Ranuras de expansión PCIe" data-description="Las ranuras PCIe..." data-image="pci-image-url">PCIe</button>
+                <button class="btn sata ports" data-title="Conectores SATA" data-description="Los conectores SATA..." data-image="sata-image-url">RAM</button>
+                <button class="btn bios chips" data-title="Chip BIOS/UEFI" data-description="El chip BIOS/UEFI..." data-image="bios-image-url">BIOS</button>
+                <button class="btn power power" data-title="Conector de Alimentación" data-description="El conector de alimentación..." data-image="power-image-url">Alimentación</button>
+                <button class="btn io ports" data-title="Puertos I/O" data-description="Los puertos I/O..." data-image="io-image-url">I/O</button>
+                <button class="btn m2 slots" data-title="Conectores M.2" data-description="Los conectores M.2..." data-image="m2-image-url">CPU</button>
+                <button class="btn cmos chips power" data-title="Batería CMOS" data-description="La batería CMOS..." data-image="cmos-image-url">CMOS</button>
+                <button class="btn vrm chips power" data-title="Módulo de Regulación de Voltaje" data-description="El VRM..." data-image="vrm-image-url">VRM</button>
+            </div>
+             
+        </main>
+    </div>
+    <div id="definition-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+        
+   
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.main.js"></script>
+
+</body>
+</html>
